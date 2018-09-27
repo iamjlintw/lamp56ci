@@ -43,4 +43,5 @@ chmod +rx /usr/bin/composer
 
 #run httpd
 rm -rf /run/httpd/* /tmp/httpd*
+mkdir /var/httpd/
 exec /usr/sbin/apachectl -DFOREGROUND
