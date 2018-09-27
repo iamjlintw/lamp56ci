@@ -18,6 +18,7 @@ yum -y install vim  git unzip zip python
 yum install -y php php-bcmath php-cli php-common php-devel php-gd php-mbstring php-mcrypt php-mysqlnd php-opcache php-pdo php-pear php-process php-tidy php-xml
 #install httpd
 yum install -y httpd  httpd-tools
+
 #install redis driver
 cd /
 mkdir src
@@ -40,3 +41,6 @@ chmod +rx /usr/bin/composer
 #yum install -y python-pip && pip install "pip>=1.4,<1.5" --upgrade
 #pip install supervisor
 
+#run httpd
+rm -rf /run/httpd/* /tmp/httpd*
+exec /usr/sbin/apachectl -DFOREGROUND
